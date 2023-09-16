@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Aplicativo exemplo de uso de EJB</h1>
+    <br>
+    <form action="usuario.do" method="GET">
+        Id: <input name="id"><br>
+        Nome: <input name="nome">
+        <input type="hidden" name="oper" value="1" />
+        <button>Inserir</button>
+    </form>
+    <br>
+    <form action="usuario.do" method="GET">
+        <input type="hidden" name="oper" value="2" />
+        <button>Listar Usuários</button>
+    </form>
+    <br>
+    <form action="mensagem.do" method="GET">
+        <input type="hidden" name="oper" value="2" />
+        <button>Exibir mensagens</button>
+    </form>
+</body>
+</html>
