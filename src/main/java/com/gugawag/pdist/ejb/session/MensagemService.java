@@ -11,18 +11,18 @@ public class MensagemService {
     @EJB
     private MensagemDAO mensagemDAO;
 
-
     public void inserir(long id, String mensagem) {
         Mensagem newMensagem = new Mensagem(id, mensagem);
-        newMensagem.setTexto(newMensagem.getTexto() + "u" + newMensagem.getId());
-        mensagemDAO.inserir(newMensagem);
+        this.mensagemDAO.inserir(newMensagem);
     }
 
     public List<Mensagem> listarMensagens() {
         return mensagemDAO.listar();
     }
 
-
+    public Mensagem pesquisarMensagemPorId(Long id) {
+        return mensagemDAO.pesquisarPorId(id);
+    }
 
 }
 

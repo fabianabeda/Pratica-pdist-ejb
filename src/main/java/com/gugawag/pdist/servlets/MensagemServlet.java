@@ -30,7 +30,17 @@ public class MensagemServlet extends HttpServlet {
                 }
                 break;
             }
+            case "3": { // Pesquisar por ID
+                long id = Long.parseLong(request.getParameter("id"));
+                Mensagem mensagem = mensagemService.pesquisarMensagemPorId(id);
+                if (mensagem != null) {
+                    resposta.println("ID: " + mensagem.getId() + ", Texto: " + mensagem.getTexto());
+                } else {
+                    resposta.println("Mensagem não encontrada para o ID especificado.");
+                }
+                break;
 
+            }
         }
     }
 }
